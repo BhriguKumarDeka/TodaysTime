@@ -3,16 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendar using Js</title>
+    <title>TodaysTime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/CalendarCard.css" />
   </head>
   <body>
     <div class="hero">
-      <div class="calendar">
-        <div id="date">01</div>
-        <div id="day">Sunday</div>
-        <div id="month">January</div>
-        <div id="year">2025</div>
+      <div class="device-casing">
+        <div class="screw top-left"></div>
+        <div class="screw top-right"></div>
+        <div class="screw bottom-left"></div>
+        <div class="screw bottom-right"></div>
+
+        <div class="calendar" id="displayArea">
+          <div class="screen-container main-date">
+            <span class="label" id="label-main">DATE_MOD</span>
+            <div id="main-display">01</div>
+          </div>
+
+          <div class="screen-container sub-info">
+            <span class="label" id="label-sub1">DAY_CYCLE</span>
+            <div id="sub-display-1">SUN</div>
+          </div>
+
+          <div class="screen-container sub-info">
+            <span class="label" id="label-sub2">MNTH_SEL</span>
+            <div id="sub-display-2">JAN</div>
+          </div>
+
+          <div class="screen-container sub-info">
+            <span class="label" id="label-sub3">YR_SYS</span>
+            <div id="sub-display-3">2025</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="btn-view" class="te-button">
+            <span class="btn-label">VIEW</span>
+          </button>
+
+          <div class="fader-group">
+            <input
+              type="range"
+              id="brightness-slider"
+              min="0.2"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+            <div class="fader-track-visual"></div>
+            <span class="btn-label">LUMEN</span>
+          </div>
+
+          <button id="btn-color" class="te-button">
+            <span class="btn-label">COLOR</span>
+          </button>
+
+          <div class="branding">
+            <span>TE-CAL // OP-2</span>
+            <a
+              href="https://github.com/BhriguKumarDeka/TodaysTime"
+              target="_blank"
+              class="github-link"
+              title="View on GitHub"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
